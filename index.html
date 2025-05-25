@@ -1,114 +1,118 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ホーム</title>
-  <style>
-    @font-face {
-      font-family: 'Uzura';
-      src: url('assets/uzura.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-    .specialfont {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    body {
-      background: linear-gradient(135deg, #87CEFA, #DDA0DD);
-      color: #005bb5;
-      font-family: 'Uzura', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    main {
-      position: relative;
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    section {
-      margin-bottom: 2rem;
-      padding: 1rem;
-    }
-    h1, h2 {
-      margin: 0 0 1rem;
-    }
-    h2 {
-      border-bottom: 2px solid #ff6f61;
-      padding-bottom: 0.5rem;
-    }
-    p {
-      margin: 1rem 0;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    ul li {
-      background: rgba(255, 255, 255, 0.2);
-      margin: 0.5rem 0;
-      padding: 0.75rem;
-      border-radius: 4px;
-      transition: background 0.3s;
-    }
-    ul li:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-    .button-container {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .button {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #ff6f61;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 4px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      transition: background 0.3s, transform 0.3s;
-    }
-    .button:hover {
-      background: #ff867f;
-      transform: scale(1.05);
-    }
-    b {
-      font-size: 1.25rem;
-      margin: 1.25rem 0;
-      color: #003870;
-    }
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #ffffff;
-    color: #005bb5;
-  }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ホーム</title>
+  <style>
+    @font-face {
+      font-family: 'Uzura';
+      src: url('assets/uzura.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .specialfont {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #87CEFA, #DDA0DD);
+      color: #005bb5;
+      font-family: 'Uzura', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      display: flex; /* Flexboxを有効にする */
+      flex-direction: column; /* 要素を縦方向に並べる */
+      min-height: 100vh; /* bodyの高さをビューポートの100%にする */
+    }
+    main {
+      position: relative;
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      flex-grow: 1; /* main要素が利用可能なスペースを埋めるようにする */
+    }
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+    }
+    h1, h2 {
+      margin: 0 0 1rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ff6f61;
+      padding-bottom: 0.5rem;
+    }
+    p {
+      margin: 1rem 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      background: rgba(255, 255, 255, 0.2);
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    ul li:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #ff6f61;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .button:hover {
+      background: #ff867f;
+      transform: scale(1.05);
+    }
+    b {
+      font-size: 1.25rem;
+      margin: 1.25rem 0;
+      color: #003870;
+    }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    color: #005bb5;
+  }
+  </style>
 <body>
-  <main>
-    <section>
-      <h2>帝国主義とアジアの列強を目指す日本</h2>
-      <p>この時代の日本は、列強と呼ばれたイギリス・フランス・ドイツといった欧米諸国と対等な国になろうと努力していた。<br>その当時列強は、発展途上の地域を植民地として支配する帝国主義的な考え方であったため、日本も朝鮮半島に影響力を広げようと考えていた。そのため、欧米のような舞踏会を開くなど、欧化政策を進めていた。<br>また、アジアの国々との連携はせず、日本の独立した欧米化を目指す考え、脱亜論が登場した。このような動き名の中で、イギリスはロシアによる清への支配を抑えるため、清の近くに位置する日本と繋がりを深めようとした。<br><br>当ウェブサイトはこの日清・日露戦争を簡単に理解できるようにすることを目的としています。</p>
-    </section>
-    <section>
-      <div class="button-container">
-        <a href="https://www.google.com/" target="_blank" class="button">日清戦争について知る</a>
-        <a href="https://www.google.com/" target="_blank" class="button">日露戦争について知る</a>
-      </div>
-    </section>
-    <section>
-      <h2>Creators</h2>
-      <p>堤・長谷川・樽本・伊藤・柏谷</p>
-    </section>
-  </main>
-  <footer>
-    <p><span class="specialfont">©</span> 2025 タルタル</p>
-  </footer>
+  <main>
+    <section>
+      <h2>帝国主義とアジアの列強を目指す日本</h2>
+      <p>この時代の日本は、列強と呼ばれたイギリス・フランス・ドイツといった欧米諸国と対等な国になろうと努力していた。<br>その当時列強は、発展途上の地域を植民地として支配する帝国主義的な考え方であったため、日本も朝鮮半島に影響力を広げようと考えていた。そのため、欧米のような舞踏会を開くなど、欧化政策を進めていた。<br>また、アジアの国々との連携はせず、日本の独立した欧米化を目指す考え、脱亜論が登場した。このような動き名の中で、イギリスはロシアによる清への支配を抑えるため、清の近くに位置する日本と繋がりを深めようとした。<br><br>当ウェブサイトはこの日清・日露戦争を簡単に理解できるようにすることを目的としています。</p>
+    </section>
+    <section>
+      <div class="button-container">
+        <a href="https://www.google.com/" target="_blank" class="button">日清戦争について知る</a>
+        <a href="https://www.google.com/" target="_blank" class="button">日露戦争について知る</a>
+      </div>
+    </section>
+    <section>
+      <h2>Creators</h2>
+      <p>堤・長谷川・樽本・伊藤・柏谷</p>
+    </section>
+  </main>
+  <footer>
+    <p><span class="specialfont">©</span> 2025 タルタル</p>
+  </footer>
 </body>
 </html>
