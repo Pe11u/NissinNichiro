@@ -15,15 +15,17 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     body {
+      /* 元の背景と色がここに戻っています */
       background: linear-gradient(135deg, #87CEFA, #DDA0DD);
       color: #005bb5;
       font-family: 'Uzura', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      /* フッターを底部に固定するためのFlexbox設定 */
       display: flex; /* Flexboxを有効にする */
-      flex-direction: column; /* 要素を縦方向に並べる */
-      min-height: 100vh; /* bodyの高さをビューポートの100%にする */
+      flex-direction: column; /* 子要素（mainとfooter）を縦に並べる */
+      min-height: 100vh; /* bodyの高さをビューポートの最低100%にする */
     }
     main {
       position: relative;
@@ -33,7 +35,7 @@
       background: rgba(255, 255, 255, 0.2);
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      flex-grow: 1; /* main要素が利用可能なスペースを埋めるようにする */
+      flex-grow: 1; /* main要素が利用可能な残りのスペースを埋めるようにする */
     }
     section {
       margin-bottom: 2rem;
@@ -105,6 +107,7 @@
         <a href="https://www.google.com/" target="_blank" class="button">日清戦争について知る</a>
         <a href="https://www.google.com/" target="_blank" class="button">日露戦争について知る</a>
       </div>
+      <p>日清・日露戦争に関する詳細情報や関連資料については、上記のボタンからアクセスしてください。</p>
     </section>
     <section>
       <h2>Creators</h2>
