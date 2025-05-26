@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用語集</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/logo.png" />
+  <style>
+    @font-face {
+      font-family: 'Uzura';
+      src: url('assets/uzura.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .specialfont {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #87CEFA 0%, #B2B2E8 50%, #DDA0DD 100%);
+      color: #005bb5;
+      font-family: 'Uzura', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    #search-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    #searchInput {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 2px solid #005bb5;
+      border-radius: 30px;
+      outline: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+    }
+    #searchInput:focus {
+      border-color: #ff6f61;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    h2 {
+      border-bottom: 2px solid #ff6f61;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      background: rgba(255, 255, 255, 0.2);
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    ul li:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .command-list li {
+      overflow: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
+      max-height: 500px;
+    }
+    .command-list li.hidden {
+      opacity: 0;
+      transform: scale(0.95);
+      max-height: 0;
+      pointer-events: none;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #ff6f61;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .button:hover {
+      background: #ff867f;
+      transform: scale(1.05);
+    }
+    p {
+      margin: 1rem 0;
+    }
+    .command-list li {
+      background: #e9f5ff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    strong {
+      display: block;
+      font-size: 1.2em;
+      color: #005bb5;
+      margin-bottom: 5px;
+    }
+    .command-description {
+      margin-top: 5px;
+      padding-left: 10px;
+      font-size: 0.95em;
+      color: #555;
+    }
+    .command-list ul {
+      list-style-type: none;
+      padding-left: 0;
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .fade {
+      font-style: italic;
+      opacity: 0.75;
+      color: #005bb5;
+      font-weight: normal;
+      display: inline;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+    footer p {
+      margin: 0;
+    }
+    footer a {
+      color: #1e90ff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .command-list li {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .command-list li[style*="display: none"] {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    
+    .command-section {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .command-section[style*="display: none"] {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+  </style>
+</head>
+<body>
+  <div id="search-container">
+    <input type="text" id="searchInput" placeholder="用語を検索…">
+  </div>
+  <main>
+    <section>
+      <h2>日清戦争</h2>
+      <ul class="command-list">
+        <li data-keywords="天津条約,天津,条約,てんしん">
+          <strong>天津条約（てんしんじょうやく）</strong>
+          <span class="command-description">1885年に日本と清が結んだ条約。条約内容を要約すると、どちらかの国が兵を送るときにもう片方の国にそれを伝えるというもの。</span>
+        </li>
+        <li data-keywords="下関条約,下関,条約,しものせき">
+          <strong>下関条約（しものせきじょうやく）</strong>
+          <span class="command-description">1895年に日清戦争の講和のために日本と清が結んだ条約。清に朝鮮の独立を認めさせ、遼東半島・台湾・澎湖列島と2億両（テール）の賠償金を清に支払わせた不平等条約となった。</span>
+        </li>
+        <li data-keywords="三国干渉,さんごくかんしょう">
+          <strong>三国干渉（さんごくかんしょう）</strong>
+          <span class="command-description">下関条約締結後にロシア・フランス・ドイツが日本に行った「遼東半島を清に返却する」という内容の勧告。日本は実際に返却したが、清から追加の賠償金を得た。</span>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>日露戦争</h2>
+      <ul class="command-list">
+        <li data-keywords="日英同盟,日英,にちえいどうめい,同盟">
+          <strong>日英同盟（にちえいどうめい）</strong>
+          <span class="command-description">1902年に日本とイギリスが結んだ軍事同盟。ロシアのアジア侵攻を抑制するために締結された。</span>
+        </li>
+        <li data-keywords="東清鉄道,とうしんてつどう,てつどう,鉄道">
+          <strong>東清鉄道（とうしんてつどう）</strong>
+          <span class="command-description">1903年にロシアのシベリア鉄道が開通した鉄道。これにより、清や朝鮮、日本に近いロシアのウラジオストクへの軍事輸送が可能となった。</span>
+        </li>
+        <li data-keywords="ポーツマス条約,ポーツマス,条約">
+          <strong>ポーツマス条約（ぽーつますじょうやく）</strong>
+          <span class="command-description">1905年にアメリカのポーツマスで締結された日本とロシア間での講和条約。日本は主に韓国での優越権、鉄道の利権、遼東半島の租借権、南樺太、沿海州の漁業権をロシアから得た。</span>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>朝鮮</h2>
+      <ul class="command-list">
+        <li data-keywords="東学党,とうがくとう,東学,とうがく,宗教">
+          <strong>東学党（とうがくとう）</strong>
+          <span class="command-description">19世紀後半の朝鮮王朝末期に新宗教「東学（とうがく）」の信徒によって構成された団体。</span>
+        </li>
+        <li data-keywords="ping,レイテンシ,応答,速度,ピング">
+          <strong>甲午農民戦争（こうごのうみんせんそう）</strong>
+          <span class="command-description">1894年に挑戦で起きた大規模な農民蜂起。東学党の信徒が中心となり、朝鮮政府は制圧に失敗したため、清と日本に援軍を求めた。</span>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>その他</h2>
+      <ul class="command-list">
+        <li data-keywords="宗主国,そうしゅこく">
+          <strong>宗主国（そうしゅこく）</strong>
+          <span class="command-description">国を管理・保護している国。今回の場合では清が朝鮮の宗主国となる。</span>
+        </li>
+        <li data-keywords="冊封国,さくほうこく,さっぽうこく,冊封,さくほう,さっぽう">
+          <strong>冊封国（さくほう）</strong>
+          <span class="command-description">他国に管理・保護されている国。東アジア特有の体制。宗主国の対義語のひとつとなる。</span>
+        </li>
+        <li data-keywords="アヘン戦争,戦争,アヘン,あへん,せんそう">
+          <strong>アヘン戦争（あへんせんそう）</strong>
+          <span class="command-description">1839年から1842年にかけて、イギリスと清の間で行われた戦争。英領インドから清にアヘンを輸出し、その対価として銀をイギリスに渡していた。しかし、清国内でアヘン中毒者が激増したり対価である銀が大量に流出したため清政府がアヘンを規制したところイギリスが「財産権の侵害」という理由で開戦。最終的な勝者はイギリスとなった。</span>
+        </li>
+        <li data-keywords="だつあろん,脱亜論">
+          <strong>脱亜論（だつあろん）</strong>
+          <span class="command-description">1885年に福沢諭吉が新聞で発表した社説。アジアの枠にとらわれずに、西洋文化を取り入れ日本を近代化しようという考え。</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p><span class="specialfont">©</span> 2025 タルタル</p>
+  </footer>
+  <script>
+document.getElementById('searchInput').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    
+    document.querySelectorAll('.command-list li').forEach(li => {
+        const keywords = li.getAttribute('data-keywords')?.toLowerCase() || '';
+        const matches = keywords.includes(query);
+        
+        if (matches) {
+            li.style.display = '';
+        } else {
+            const parent = li.closest('ul').parentElement; 
+            const parentKeywords = parent?.getAttribute('data-keywords')?.toLowerCase() || '';
+            
+            if (parentKeywords.includes(query)) {
+                li.style.display = '';
+            } else {
+                li.style.display = 'none';
+            }
+        }
+    });
+    document.querySelectorAll('.command-section').forEach(section => {
+        const commands = section.querySelectorAll('.command-list li');
+        const isAnyCommandVisible = Array.from(commands).some(li => li.style.display !== 'none');
+        
+        if (isAnyCommandVisible) {
+            section.style.display = '';
+        } else {
+            section.style.display = 'none';
+        }
+    });
+});
+
+  </script>
+</body>
+</html>
